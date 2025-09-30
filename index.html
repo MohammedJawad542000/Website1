@@ -1,48 +1,111 @@
+<!--
+Files included below:
+1) index.html   (Homepage)
+2) page2.html   (Second site — linked from homepage)
+
+Copy each section into its own file (index.html and page2.html) and open in a browser.
+-->
+
+<!-- ===== index.html ===== -->
 <!doctype html>
-</div>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Playful Apparel — Home</title>
+  <style>
+    :root{--accent:#ff6b6b;--bg:#f7f7fb;--card:#ffffff;--muted:#6b7280}
+    *{box-sizing:border-box}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial;background:var(--bg);color:#111}
+    header{background:linear-gradient(135deg,#ffffffcc, #f2f6ff);padding:28px 20px;border-bottom:1px solid #eee}
+    .container{max-width:1000px;margin:0 auto;padding:24px}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#ffd166);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700}
+    nav{margin-left:auto}
+    nav a{margin-left:14px;text-decoration:none;color:var(--muted);font-weight:600}
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:center;margin-top:28px}
+    .card{background:var(--card);padding:20px;border-radius:14px;box-shadow:0 6px 20px rgba(16,24,40,0.06)}
+    h1{font-size:28px;margin:0 0 12px}
+    p.lead{color:var(--muted);margin:0 0 18px}
+    .cta{display:inline-block;padding:10px 16px;border-radius:10px;background:var(--accent);color:#fff;text-decoration:none;font-weight:700}
+    .gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:12px}
+    .gallery img{width:100%;height:160px;object-fit:cover;border-radius:10px}
+    footer{margin-top:26px;color:var(--muted);font-size:13px}
+    /* small screens */
+    @media (max-width:780px){.hero{grid-template-columns:1fr;}.gallery img{height:120px}.logo{width:48px;height:48px}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container" style="display:flex;align-items:center">
+      <div class="brand">
+        <div class="logo">P</div>
+        <div>
+          <div style="font-weight:800">Playful Apparel</div>
+          <div style="font-size:13px;color:var(--muted)">Kids & Men — Bright, comfy, everyday</div>
+        </div>
+      </div>
+      <nav>
+        <a href="page2.html">Visit the other site →</a>
+      </nav>
+    </div>
+  </header>
 
+  <main class="container">
+    <section class="hero">
+      <div class="card">
+        <h1>Fresh looks for little explorers</h1>
+        <p class="lead">Comfortable, durable clothes for curious kids and modern men. Handpicked styles that travel well from playgrounds to family outings.</p>
+        <a class="cta" href="#shop">Shop Kids</a>
 
-<aside class="card" style="text-align:center">
-<h3 style="margin-top:0">Why customers love us</h3>
-<ul style="text-align:left;color:var(--muted);padding-left:18px">
-<li>Soft, breathable fabrics</li>
-<li>Ethically made</li>
-<li>Easy exchanges</li>
-</ul>
-<p style="margin:14px 0 8px;color:var(--muted)">Curious? Jump to the second site for a playful product demo.</p>
-<a class="cta" href="https://charming-kataifi-4ae7a6.netlify.app/">Open demo site</a>
-</aside>
-</section>
+        <div class="gallery" style="margin-top:18px">
+          <img src="https://images.unsplash.com/photo-1536004482213-64f6ba0d1d6b?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=1" alt="kid 1">
+          <img src="https://images.unsplash.com/photo-1542060742-8ef6b1f2b7f5?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=2" alt="kid 2">
+          <img src="https://images.unsplash.com/photo-1545996124-1b4b1c7f4c0e?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=3" alt="men 1">
+          <img src="https://images.unsplash.com/photo-1520975912906-1e9b7ec6eb2e?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=4" alt="men 2">
+        </div>
+      </div>
 
+      <aside class="card" style="text-align:center">
+        <h3 style="margin-top:0">Why customers love us</h3>
+        <ul style="text-align:left;color:var(--muted);padding-left:18px">
+          <li>Soft, breathable fabrics</li>
+          <li>Ethically made</li>
+          <li>Easy exchanges</li>
+        </ul>
+        <p style="margin:14px 0 8px;color:var(--muted)">Curious? Jump to the second site for a playful product demo.</p>
+        <a class="cta" href="page2.html">Open demo site</a>
+      </aside>
+    </section>
 
-<section id="shop" style="margin-top:20px">
-<div class="card">
-<h2 style="margin-top:0">Featured collection</h2>
-<p class="lead">Bright tees, comfy joggers and tiny jackets — all ready for adventure.</p>
-<div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:12px">
-<div style="flex:1 1 180px;background:linear-gradient(180deg,#fff,#fafbff);padding:12px;border-radius:12px">
-<strong>Tiny Explorer Tee</strong>
-<div style="color:var(--muted);font-size:13px;margin-top:6px">Sizes 1-8</div>
-</div>
-<div style="flex:1 1 180px;background:linear-gradient(180deg,#fff,#fafbff);padding:12px;border-radius:12px">
-<strong>Mini Jogger</strong>
-<div style="color:var(--muted);font-size:13px;margin-top:6px">Soft waistband</div>
-</div>
-<div style="flex:1 1 180px;background:linear-gradient(180deg,#fff,#fafbff);padding:12px;border-radius:12px">
-<strong>Heritage Jacket</strong>
-<div style="color:var(--muted);font-size:13px;margin-top:6px">Water-resistant</div>
-</div>
-</div>
-</div>
-</section>
+    <section id="shop" style="margin-top:20px">
+      <div class="card">
+        <h2 style="margin-top:0">Featured collection</h2>
+        <p class="lead">Bright tees, comfy joggers and tiny jackets — all ready for adventure.</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:12px">
+          <div style="flex:1 1 180px;background:linear-gradient(180deg,#fff,#fafbff);padding:12px;border-radius:12px"> 
+            <strong>Tiny Explorer Tee</strong>
+            <div style="color:var(--muted);font-size:13px;margin-top:6px">Sizes 1-8</div>
+          </div>
+          <div style="flex:1 1 180px;background:linear-gradient(180deg,#fff,#fafbff);padding:12px;border-radius:12px"> 
+            <strong>Mini Jogger</strong>
+            <div style="color:var(--muted);font-size:13px;margin-top:6px">Soft waistband</div>
+          </div>
+          <div style="flex:1 1 180px;background:linear-gradient(180deg,#fff,#fafbff);padding:12px;border-radius:12px"> 
+            <strong>Heritage Jacket</strong>
+            <div style="color:var(--muted);font-size:13px;margin-top:6px">Water-resistant</div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-
-<footer>
-<div class="card" style="display:flex;justify-content:space-between;align-items:center">
-<div>© Playful Apparel — Made with care</div>
-<div style="font-size:13px;color:var(--muted)">Open <code>index.html</code> or click the link in the header.</div>
-</div>
-</footer>
-</main>
+    <footer>
+      <div class="card" style="display:flex;justify-content:space-between;align-items:center">
+        <div>© Playful Apparel — Made with care</div>
+        <div style="font-size:13px;color:var(--muted)">Open <code>index.html</code> or click the link in the header.</div>
+      </div>
+    </footer>
+  </main>
 </body>
 </html>
+
+
